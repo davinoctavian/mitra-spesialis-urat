@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Lato:wght@300;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5ecd7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1208;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8963e;
+  border-radius: 3px;
+}
+
+/* ── Pulse animation (hero badge dot) ─────────── */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.4);
+  }
+}
+
+/* ── Marquee strip ─────────────────────────────── */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.strip-track {
+  display: flex;
+  gap: 60px;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+
+/* ── Hover lifts ───────────────────────────────── */
+.service-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(200, 150, 62, 0.5) !important;
+  box-shadow: 0 20px 50px rgba(26, 18, 8, 0.35);
+}
+
+.testi-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 16px 40px rgba(26, 18, 8, 0.1) !important;
+}
+
+.service-btn:hover {
+  background: rgba(200, 150, 62, 0.15) !important;
+  border-color: #c8963e !important;
+}
+
+.hero-btn-primary:hover {
+  background: #3d2b10 !important;
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(200, 150, 62, 0.1) !important;
+}
+
+.submit-btn:hover {
+  background: #e8b86d !important;
+}
+
+input:focus,
+select:focus {
+  border-color: rgba(200, 150, 62, 0.7) !important;
+  outline: none;
+}
+
+/* ── Responsive ────────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .testi-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .booking-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
+
+  .hero {
+    flex-direction: column !important;
+    padding: 100px 24px 60px !important;
+    min-height: auto !important;
+  }
+  .hero-visual {
+    display: none !important;
+  }
+  .hero-stats {
+    gap: 24px !important;
+    flex-wrap: wrap;
+  }
+
+  .section {
+    padding: 70px 24px !important;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .testi-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .booking-wrapper {
+    grid-template-columns: 1fr !important;
+    padding: 0;
+  }
+  .booking-form {
+    padding: 28px 20px !important;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .about-img-box {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .footer-inner {
+    padding: 40px 24px !important;
+  }
+  .footer-links {
+    gap: 4px !important;
+  }
+
+  nav {
+    padding: 16px 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-btns {
+    flex-direction: column !important;
+  }
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .about-features {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Fade-in helper (applied via JS intersection) ─ */
+[data-id] {
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
