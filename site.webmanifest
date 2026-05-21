@@ -1,0 +1,27 @@
+{
+  "name": "Mitra Urat — Spesialis Urat & Saraf",
+  "short_name": "Mitra Urat",
+  "description": "Spesialis urut saraf & urat di Cikarang. Menangani keseleo, terkilir, leher kaku, kaki & tangan bengkak. Buka setiap hari senin-jumat 09.00–21.00 WIB.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A1208",
+  "theme_color": "#C8963E",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
