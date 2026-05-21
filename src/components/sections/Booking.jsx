@@ -154,7 +154,7 @@ export default function Booking() {
 
               <Field label="Tanggal & Waktu">
                 <input
-                  style={s.input}
+                  style={{ ...s.input, ...s.inputDate }}
                   type="datetime-local"
                   value={form.date}
                   onChange={set("date")}
@@ -287,7 +287,9 @@ const s = {
     width: "100%",
     boxSizing: "border-box",
   },
-
+  inputDate: {
+    appearance: "none",
+  },
   // Message preview
   preview: {
     background: `${C.dark3}`,
