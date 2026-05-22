@@ -32,7 +32,7 @@ export default function About() {
               </div>
             </div>
             <div style={s.floatCard}>
-              <div style={s.floatNum}>6</div>
+              <div style={s.floatNum}>5</div>
               <div style={s.floatLabel}>Jenis Pijat</div>
             </div>
           </div>
