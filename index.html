@@ -203,19 +203,25 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://mitra-spesialis-urat.vercel.app/#service",
-        "name": "Mitra Urat — Layanan Urut Saraf & Urat Tradisional",
+        "@type": "Product",
+        "@id": "https://mitra-spesialis-urat.vercel.app/#product",
+        "name": "Layanan Urut Saraf & Urat — Mitra Urat Cikarang",
         "description": "Layanan urut saraf dan urat tradisional di Cikarang. Menangani keseleo, terkilir, leher kaku, bengkak, dan gangguan peredaran darah.",
-        "url": "https://mitra-spesialis-urat.vercel.app",
-        "provider": {
-          "@id": "https://mitra-spesialis-urat.vercel.app/#business"
+        "image": "https://mitra-spesialis-urat.vercel.app/og-image.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "Mitra Urat"
         },
-        "areaServed": {
-          "@type": "City",
-          "name": "Cikarang"
+        "offers": {
+          "@type": "Offer",
+          "url": "https://mitra-spesialis-urat.vercel.app/#kontak",
+          "priceCurrency": "IDR",
+          "price": "250.000",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://mitra-spesialis-urat.vercel.app/#business"
+          }
         },
-        "serviceType": "Urut Saraf & Urat Tradisional",
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
